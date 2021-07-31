@@ -28,4 +28,7 @@
 		</dependency>
 	</dependencies>
   </dependencyManagement>
+  <modules>
+  	<module>room-web-app2</module>
+  </modules>
 </project>
