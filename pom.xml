@@ -25,5 +25,6 @@
    </build>
   <modules>
   	<module>fizzbuzz-web-app</module>
+  	<module>room-web-app</module>
   </modules>
 </project>
