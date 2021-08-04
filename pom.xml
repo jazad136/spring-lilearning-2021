@@ -26,5 +26,6 @@
   <modules>
   	<module>fizzbuzz-web-app</module>
   	<module>room-web-app</module>
+  	<module>room-web-app-basic</module>
   </modules>
 </project>
