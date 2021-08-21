@@ -28,5 +28,6 @@
   	<module>room-web-app</module>
   	<module>room-web-app-basic</module>
   	<module>room-web-app-msng</module>
+  	<module>room-web-app-msngconsumer</module>
   </modules>
 </project>
