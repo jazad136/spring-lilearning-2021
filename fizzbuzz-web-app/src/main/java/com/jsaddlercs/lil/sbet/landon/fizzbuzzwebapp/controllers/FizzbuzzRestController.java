@@ -19,7 +19,11 @@ public class FizzbuzzRestController {
 	}
 	
 	@GetMapping
-	public FizzbuzzPack getFizzbuzzResponse(@RequestParam String input) { 
-		return new FizzbuzzPack(input, fizzbuzzService.getFizzbuzz(input));
+	public FizzbuzzPack getFizzbuzzResponse(@RequestParam(defaultValue="") String input) { 
+		String result = fizzbuzzService.getFizzbuzz(input);
+		if(result.equals("noInput")) { 
+			return new FizzbuzzPack(input, "No input. Use ?input=<number> after the slash in the URL");
+		}
+		return new FizzbuzzPack(input, result);
 	}
 }

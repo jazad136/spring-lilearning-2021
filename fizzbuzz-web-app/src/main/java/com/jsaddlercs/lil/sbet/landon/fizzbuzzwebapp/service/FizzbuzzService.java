@@ -11,6 +11,9 @@ public class FizzbuzzService {
 	 */
 	public String getFizzbuzz(String input) { 
 		String result = "";
+		if(input.isBlank()) { 
+			return "noInput";
+		}
 		try {
 			int parsedInput = Integer.parseInt(input);
 			if(parsedInput % 3 != 0 && parsedInput % 5 != 0) { 
