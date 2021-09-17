@@ -27,6 +27,9 @@
   	<module>fizzbuzz-web-app</module>
   	<module>room-web-app</module>
   	<module>room-web-app-basic</module>
+  	<module>room-web-app-msng</module>
+  	<module>room-web-app-msngconsumer</module>
   	<module>room-web-app-sec</module>
+  	<module>explorecali</module>
   </modules>
 </project>
