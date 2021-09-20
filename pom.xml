@@ -31,5 +31,6 @@
   	<module>room-web-app-msngconsumer</module>
   	<module>room-web-app-sec</module>
   	<module>explorecali</module>
+  	<module>explorecali-services</module>
   </modules>
 </project>
