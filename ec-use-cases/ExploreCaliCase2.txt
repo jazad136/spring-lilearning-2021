@@ -1,0 +1,9 @@
+Use Cases for new Explore Cali Website
+Use Case 2: 
+
+Modify a Tour Rating
+
+As a traveler who previously rated a tour, I would like to 
+modify the score or comment.
+
+I have a personal customer identifier. 
