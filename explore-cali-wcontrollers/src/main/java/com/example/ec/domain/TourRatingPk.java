@@ -1,5 +1,7 @@
 package com.example.ec.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.ManyToOne;
@@ -13,7 +15,7 @@ import javax.persistence.ManyToOne;
  *
  */
 @Embeddable
-public class TourRatingPk {
+public class TourRatingPk implements Serializable {
 	@ManyToOne
 	private Tour tour;
 	
@@ -21,7 +23,13 @@ public class TourRatingPk {
 	private Integer customerId;
 	
 	public TourRatingPk() { }
-	
+	/** 
+	 * Fully initialize a TourRatingPk using a tour and customerId
+	 */
+	public TourRatingPk(Tour tour, Integer customerId) { 
+		this.tour = tour; 
+		this.customerId = customerId;
+	}
 	public Tour getTour() { return tour; } 
 	
 	public Integer getCustomerId() { return customerId; } 

@@ -34,6 +34,15 @@ public class TourRating {
                 '}';
     }
 	
+	public TourRatingPk getPk() { return pk; }
+	public void setPk(TourRatingPk pk) { this.pk = pk; }
+
+	public Integer getScore() { return score; }
+	public void setScore(Integer score) { this.score = score; }
+
+	public String getComment() { return comment; }
+	public void setComment(String comment) { this.comment = comment; }
+
 	@Override
     public int hashCode() {
         return Objects.hash(pk, score, comment);
