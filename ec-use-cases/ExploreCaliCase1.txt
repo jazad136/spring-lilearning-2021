@@ -1,0 +1,9 @@
+Use Cases for new Explore Cali Website
+Use Case 1: 
+
+Rate a Tour: 
+
+As a traveler who participated in a tour, I would like to 
+submit a 1-5 star score and a comment up to 255 characters. 
+
+I have a personal customer identifier.

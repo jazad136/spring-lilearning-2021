@@ -32,5 +32,6 @@
   	<module>room-web-app-sec</module>
   	<module>explorecali</module>
   	<module>explorecali-services</module>
+  	<module>explore-cali-wcontrollers</module>
   </modules>
 </project>
