@@ -7,9 +7,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example.ec</groupId>
-	<artifactId>explorecali4</artifactId>
+	<artifactId>explorecali-services</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>explorecali4</name>
+	<name>explorecali-services</name>
 	<description>Explore California Microservice</description>
 	<properties>
 		<java.version>11</java.version>
