@@ -2,12 +2,17 @@
 Java Spring: My Java Spring self-written solutions from my spring LinkedIn Learning coursework in 2021. 
 
 ### Index
-There are two separate projects in this repository. 
+There are three separate projects in this repository. 
 
 1.  The **room-web-app** from Frank P. Moley's "*Spring Boot 2.0 Essential Training*" Course on LinkedIn Learning. 
 
 2.  The **fizzbuzz-web-app** that I created as an exercise from that course. 
 
+3.  (New Oct. 2021) <br> The **explore-cali** application from Mary Ellen Bowman's <br> "*Creating Your First Spring Boot Microservice*" and <br>"*Extending Securing and Dockerizing Spring Boot Microservices*" courses on LinkedIn Learning  
+
+#### All three of these projects feature backend website designs. <br>(Really loving the content that I find these guys provide on Spring)
+
+#### Folder Descriptions
 - See folder *room-web-app* for the room website for using Swing with services
 
 - See folder *room-web-app-sec*  for the room website that uses authentication to access the room listings.
