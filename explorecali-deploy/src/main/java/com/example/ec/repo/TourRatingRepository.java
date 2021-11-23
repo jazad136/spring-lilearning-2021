@@ -1,25 +1,21 @@
 package com.example.ec.repo;
 
-import java.util.List;
-import java.util.Optional;
-
+import com.example.ec.domain.TourRating;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import com.example.ec.domain.TourRating;
-import com.example.ec.domain.TourRatingPk;
+import java.util.List;
+import java.util.Optional;
 
-/** 
- * Source code for TourRatingRepository
- * Not exposed to rest at all 
- * Used by TourRatingController 
- * Created by Jonathan A. Saddler, with help from Mary Ellen Bowman.
+/**
+ * Tour Rating Repository Interface
  *
+ * Created by Mary Ellen Bowman
  */
 @RepositoryRestResource(exported = false)
-public interface TourRatingRepository extends CrudRepository<TourRating, TourRatingPk> {
+public interface TourRatingRepository extends CrudRepository<TourRating, Integer> {
 
     /**
      * Lookup all the TourRatings for a tour.
@@ -27,7 +23,7 @@ public interface TourRatingRepository extends CrudRepository<TourRating, TourRat
      * @param tourId is the tour Identifier
      * @return a List of any found TourRatings
      */
-    List<TourRating> findByPkTourId(Integer tourId);
+    List<TourRating> findByTourId(Integer tourId);
 
     /**
      * Lookup a page of TourRatings for a tour.
@@ -36,7 +32,7 @@ public interface TourRatingRepository extends CrudRepository<TourRating, TourRat
      * @param pageable details for the desired page
      * @return a Page of any found TourRatings
      */
-    Page<TourRating> findByPkTourId(Integer tourId, Pageable pageable);
+    Page<TourRating> findByTourId(Integer tourId, Pageable pageable);
 
     /**
      * Lookup a TourRating by the TourId and Customer Id
@@ -44,5 +40,5 @@ public interface TourRatingRepository extends CrudRepository<TourRating, TourRat
      * @param customerId
      * @return TourRating if found, null otherwise.
      */
-    Optional<TourRating> findByPkTourIdAndPkCustomerId(Integer tourId, Integer customerId);
+    Optional<TourRating> findByTourIdAndCustomerId(Integer tourId, Integer customerId);
 }
