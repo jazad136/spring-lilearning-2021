@@ -1,20 +1,17 @@
 package com.example.ec.domain;
 
+import javax.persistence.*;
 import java.util.Objects;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-
+/**
+ * Rating of a Tour by a Customer
+ *
+ * Created by Mary Ellen Bowman
+ */
 @Entity
 @Table(name="tour_rating")
 public class TourRating {
-	@Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
@@ -30,8 +27,11 @@ public class TourRating {
 
     @Column
     private String comment;
-	
-	/**
+
+    protected TourRating() {
+    }
+
+    /**
      * Create a fully initialized TourRating.
      *
      * @param tour          the tour.
@@ -46,7 +46,6 @@ public class TourRating {
         this.comment = comment;
     }
 
-    protected TourRating() { }
     /**
      * Create a fully initialized TourRating.
      *
@@ -77,7 +76,11 @@ public class TourRating {
             default: return score.toString();
         }
     }
-	
+
+    public Integer getId() {
+        return id;
+    }
+
     public Integer getScore() {
         return score;
     }
@@ -126,6 +129,4 @@ public class TourRating {
     public int hashCode() {
         return Objects.hash(id, tour, customerId, score, comment);
     }
-	
-	
 }

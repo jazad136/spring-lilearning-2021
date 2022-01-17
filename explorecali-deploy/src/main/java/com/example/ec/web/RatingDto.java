@@ -2,16 +2,16 @@ package com.example.ec.web;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-
-import com.sun.istack.NotNull;
 
 /**
  * Data Transfer Object for Rating a Tour.
  *
  * Created by Mary Ellen Bowman
  */
-public class RatingDto {
+
+public class RatingDto  {
 
     @Min(0)
     @Max(5)
@@ -26,9 +26,9 @@ public class RatingDto {
     /**
      * Constructor to fully initialize the RatingDto
      *
-     * @param score
-     * @param comment
-     * @param customerId
+     * @param score score
+     * @param comment comment
+     * @param customerId customer identifier
      */
     public RatingDto(Integer score, String comment, Integer customerId) {
         this.score = score;

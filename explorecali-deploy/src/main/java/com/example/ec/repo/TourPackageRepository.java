@@ -1,35 +1,58 @@
 package com.example.ec.repo;
 
-import java.util.Optional;
-
+import com.example.ec.domain.TourPackage;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
 
-import com.example.ec.domain.TourPackage;
+import java.util.Optional;
 
-@RepositoryRestResource(collectionResourceRel = "packages", path="packages")
+/**
+ * Tour Package Repository Interface
+ *
+ * Created by Mary Ellen Bowman
+ */
+@RepositoryRestResource(collectionResourceRel = "packages", path = "packages")
+//@Tag(name = "Tour Package", description = "The Tour Package API")
 public interface TourPackageRepository extends CrudRepository<TourPackage, String> {
-	Optional<TourPackage> findByName(String name);
 
-	@Override
-	@RestResource(exported = false)
-	<S extends TourPackage> S save(S entity);
+    /**
+     * Lookup a tour package by the name.
+     *
+     * @param name name of the tour.
+     * @return TourPackage if found, null otherwise.
+     */
+    Optional<TourPackage> findByName(@Param("name") String name);
 
-	@Override
-	@RestResource(exported = false)
-	<S extends TourPackage> Iterable<S> saveAll(Iterable<S> entities);
+    //Not exposed by Spring Data REST
+    @Override
+    @RestResource(exported = false)
+    <S extends TourPackage> S save(S s);
 
-	@Override
-	@RestResource(exported = false)
-	void deleteById(String id);
+    //Not exposed by Spring Data REST
+    @Override
+    @RestResource(exported = false)
+    <S extends TourPackage> Iterable<S> saveAll(Iterable<S> iterable);
 
-	@Override
-	@RestResource(exported = false)
-	void deleteAllById(Iterable<? extends String> ids);
+    //Not exposed by Spring Data REST
+    @Override
+    @RestResource(exported = false)
+    void deleteById(String s);
 
-	@Override
-	@RestResource(exported = false)
-	void deleteAll(Iterable<? extends TourPackage> entities);
-	
+    //Not exposed by Spring Data REST
+    @Override
+    @RestResource(exported = false)
+    void delete(TourPackage tourPackage);
+
+    //Not exposed by Spring Data REST
+    @Override
+    @RestResource(exported = false)
+    void deleteAll(Iterable<? extends TourPackage> iterable);
+
+    //Not exposed by Spring Data REST
+    @Override
+    @RestResource(exported = false)
+    void deleteAll();
 }
+
