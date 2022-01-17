@@ -1,4 +1,3 @@
-
 insert into tour_package (code, name) values
 ('BC', 'Backpack Cal'),
 ('CC', 'California Calm'),
@@ -408,7 +407,33 @@ insert into tour  (tour_package_code, title, description, blurb, bullets, diffic
     'Winery, hiking, relaxing, cooking, Napa Valley'
   );
 
+
   insert into tour_rating (tour_id, customer_id, score, comment) values
   (1, 4, 5, 'I loved it'),
+  (1, 5, 5, 'We loved it'),
+  (1, 6, 5, 'She loved it'),
+  (1, 7, 5, 'He loved it'),
+  (1, 8, 5, 'They loved it'),
+  (1, 9, 5, 'Everbody loved it'),
+  (1, 10, 1, 'I hated it'),
+  (1, 11, 1, 'We hated it'),
   (2, 100, 5, 'I really thought it could have been better');
 
+-- USER
+-- non-encrypted password: letmein
+-- all these passwords are "hashes" to the actual password letmein
+-- added lecture 04-01
+-- remember we need the tables in schema.sql for this to work. 
+  insert into security_user(id, username, password, first_name, last_name) values
+  (1, 'admin', '$2a$12$ZhGS.zcWt1gnZ9xRNp7inOvo5hIT0ngN7N.pN939cShxKvaQYHnnu',
+  'Administrator', 'Administrator'),
+  (2,'csr_jane', '$2a$12$ZhGS.zcWt1gnZ9xRNp7inOvo5hIT0ngN7N.pN939cShxKvaQYHnnu',
+  'Jane', 'Doe'),
+  (3,'csr_mark', '$2a$12$ZhGS.zcWt1gnZ9xRNp7inOvo5hIT0ngN7N.pN939cShxKvaQYHnnu',
+  'Mark', 'Smith'),
+  (4,'wally', '$2a$12$ZhGS.zcWt1gnZ9xRNp7inOvo5hIT0ngN7N.pN939cShxKvaQYHnnu',
+  'Walter', 'Adams');
+  
+  INSERT INTO security_role (id, role_name, description) VALUES (1, 'ROLE_ADMIN', 'Administrator');
+  INSERT INTO security_role (id, role_name, description) VALUES (2, 'ROLE_CSR', 'Customer Service Representative');
+  
