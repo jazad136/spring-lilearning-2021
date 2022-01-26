@@ -16,9 +16,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //				version = "3.0.1"
 //
 //		))
-public class ExplorecaliApplication {
+public class Explorecali21Application {
 	public static void main(String[] args) {
-		SpringApplication.run(ExplorecaliApplication.class, args);
+		SpringApplication.run(Explorecali21Application.class, args);
 	}
 
 }

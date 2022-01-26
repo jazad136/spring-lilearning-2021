@@ -27,7 +27,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ContextConfiguration;
 
-import com.example.ec.ExplorecaliApplication;
+import com.example.ec.Explorecali21Application;
 import com.example.ec.domain.Tour;
 import com.example.ec.domain.TourRating;
 import com.example.ec.service.TourRatingService;
@@ -54,7 +54,7 @@ import com.example.ec.service.TourRatingService;
  */
 
 @SpringBootTest(webEnvironment = RANDOM_PORT)
-@ContextConfiguration(classes = ExplorecaliApplication.class)
+@ContextConfiguration(classes = Explorecali21Application.class)
 @AutoConfigureMockMvc
 public class TourRatingControllerTest {
 

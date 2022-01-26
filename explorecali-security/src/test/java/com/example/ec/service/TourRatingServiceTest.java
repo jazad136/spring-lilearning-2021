@@ -16,7 +16,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.ContextConfiguration;
 
-import com.example.ec.ExplorecaliApplication;
+import com.example.ec.Explorecali21Application;
 import com.example.ec.domain.Tour;
 import com.example.ec.domain.TourRating;
 import com.example.ec.repo.TourRatingRepository;
@@ -38,7 +38,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 //@SpringJUnitConfig
 //@ExtendWith(MockitoExtension.class)
 @SpringBootTest(webEnvironment = RANDOM_PORT)
-@ContextConfiguration(classes = ExplorecaliApplication.class)
+@ContextConfiguration(classes = Explorecali21Application.class)
 @AutoConfigureMockMvc
 public class TourRatingServiceTest {
 

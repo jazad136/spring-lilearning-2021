@@ -1,5 +1,6 @@
 package com.example.ec.domain;
 
+import java.util.Arrays;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -33,6 +34,14 @@ public class User {
 	private List<Role> roles;
 	
 
+	public User(String username, String password, Role role, String firstName, String lastName) {
+        this.username = username;
+        this.password = password;
+        this.roles = Arrays.asList(role);
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+	
 	public String getUsername() { return username; }
 	public void setUsername(String username) { this.username = username; }
 
