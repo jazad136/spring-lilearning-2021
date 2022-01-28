@@ -33,7 +33,11 @@ public class User {
 	
 	private List<Role> roles;
 	
-
+    /**
+     * Default Constructor.
+     */
+    protected User() { }
+    
 	public User(String username, String password, Role role, String firstName, String lastName) {
         this.username = username;
         this.password = password;
