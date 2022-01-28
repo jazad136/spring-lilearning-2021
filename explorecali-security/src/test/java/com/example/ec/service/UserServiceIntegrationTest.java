@@ -23,6 +23,7 @@ public class UserServiceIntegrationTest {
         assertThat(user.get().getPassword(), not("dummypassword"));
         System.out.println("Encoded Password = " + user.get().getPassword());
 //        Encoded Password = $2a$12$LqBbn9sjhN/N7WoSp6ukYO4Q8ZMO/yhRXXDk5eZDxy6sK6CooG1RC
+        // note this has a random salt. 
     }
     
     
