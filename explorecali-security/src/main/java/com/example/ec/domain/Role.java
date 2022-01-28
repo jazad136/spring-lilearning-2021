@@ -7,13 +7,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.security.core.GrantedAuthority;
+
 /** 
  * Source code for the Role Class: 
  * Created by Mary Ellen Bowman, with syntactic sugar by Jonathan A. Saddler. 
  */
 @Entity
 @Table(name="security_role")
-public class Role {
+public class Role implements GrantedAuthority {
 	
 	private static final long serialVersionUID = 1L;
 	@Id
@@ -26,6 +28,10 @@ public class Role {
 	@Column(name="description")
 	private String description;
 
+	@Override
+    public String getAuthority() {
+        return roleName;
+    }
 	public Long getId() { return id; }
 
 	public void setId(Long id) { this.id = id; }
