@@ -22,6 +22,11 @@ There are three separate projects in this repository.
 
 - See *fizzbuzz-web-app* for my own fun attempt at building a Fizzbuzz web app with a service that can be used to play the fizzbuzz game. 
 
+- See folder *explorecali-deploy* for the Explore California demo website that implements Mockito tests, unit tests and integration tests. 
+
+- See folder *explorecali-security* for the Explore California website that implements on top of deploy, a security wrapper restricting access to API 
+endpoints using Spring Security, and upgrades the system to use JWT authentication.
+
 To run the RabbitMQ application for the room-web-app-msngconsumer module of this repository, you will need to download and install Docker.
 Docker must be used to run rabbit for this module to work. 
 Docker is not needed for the other modules at this time. 
