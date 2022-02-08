@@ -34,5 +34,6 @@
   	<module>explorecali-services</module>
   	<module>explore-cali-wcontrollers</module>
   	<module>explorecali-deploy</module>
+  	<module>explorecali-docker</module>
   </modules>
 </project>
